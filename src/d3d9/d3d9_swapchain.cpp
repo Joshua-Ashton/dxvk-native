@@ -199,7 +199,7 @@ namespace dxvk {
   D3D9SwapChainEx::~D3D9SwapChainEx() {
     DestroyBackBuffers();
 #ifndef DXVK_NATIVE
-    ResetWindowProc();
+    ResetWindowProc(m_window);
 #endif
 
     if (!wsi::restoreDisplayMode(m_monitor))

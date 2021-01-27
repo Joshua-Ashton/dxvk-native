@@ -461,6 +461,7 @@ namespace dxvk {
         for (const auto& pair : m_eventMap)
           SetEvent(pair.second);
       }
+    }
 #endif
   }
   

@@ -40,7 +40,7 @@ dxvk_extradep = [ ]
 
 dxvk_platform = 'windows'
 dxvk_wsi      = 'win32'
-so_prefix     = ''
+so_prefix     = 'dxvk_'
 
 if not dxvk_native
   if dxvk_compiler.get_id() == 'msvc'
@@ -97,7 +97,6 @@ else
     lib_vulkan  = dxvk_compiler.find_library('vulkan-1', dirs : dxvk_library_path)
     lib_sdl2    = dxvk_compiler.find_library('SDL2',     dirs : dxvk_library_path)
     wrc = find_program('rc')
-    so_prefix = 'dxvk_'
   else
     dxvk_include_path = include_directories('./include', './include/native/', './include/native/windows', './include/native/directx')
     lib_vulkan  = dxvk_compiler.find_library('vulkan')

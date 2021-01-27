@@ -3,6 +3,7 @@
 #include <windows.h>
 
 #include <array>
+#include <cstdint>
 
 namespace dxvk::wsi {
 

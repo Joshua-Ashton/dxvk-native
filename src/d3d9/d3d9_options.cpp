@@ -76,7 +76,7 @@ namespace dxvk {
     this->generalHazards = adapter == nullptr || !adapter->matchesDriver(DxvkGpuVendor::Nvidia, VK_DRIVER_ID_NVIDIA_PROPRIETARY_KHR, 0, 0);
     applyTristate(this->generalHazards, config.getOption<Tristate>("d3d9.generalHazards", Tristate::Auto));
 
-    this->d3d9FloatEmulation    = true; // <-- Future Extension?
+    this->d3d9FloatEmulation    = false; // <-- Future Extension?
 
     applyTristate(this->d3d9FloatEmulation, config.getOption<Tristate>("d3d9.floatEmulation", Tristate::Auto));
   }
