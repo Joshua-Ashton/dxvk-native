@@ -1,6 +1,7 @@
 #include "util_env.h"
 
 #include <unistd.h>
+#include <array>
 #include <filesystem>
 
 namespace dxvk::env {
